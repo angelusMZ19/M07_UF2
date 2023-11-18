@@ -1,3 +1,5 @@
+
+<!-- formulario de registro -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +8,8 @@
     <title>signup</title>
 </head>
 <body>
-<h1 >{{$titulo}}</h1>
-    <form method="POST" action="../crear_user/index.php" class="mx-auto mt-1" style="max-width: 350px;">
+<h1 >{{$titulo}}</h1><!-- variable que recibe del controlador -->
+    <form method="POST"  class="mx-auto mt-1" style="max-width: 350px;" action="">
       <div class="mb-3">
         <label for="inputName" class="form-label">Id</label>
         <input type="number" class="form-control" name="id">
@@ -39,7 +41,7 @@
       </div>
       <input type="submit" class="btn btn-primary" name="submit">
       <br>
-      <a href="login.html">You already have an account</a>
+      <a href="{{ url('veronica/signin') }}">You already have an account</a> <!-- redireccionamiento -->
     </form>
 </body>
 </html>

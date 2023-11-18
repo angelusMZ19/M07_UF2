@@ -15,10 +15,11 @@ use App\Http\Controllers\SignController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 Route::prefix('/veronica') ->group(function(){
-    Route::get('/signin/{iniciar}/{sesion}/{de}/{usuario}', [SignController::class,'signin']);
-    Route::get('/signup/{creacion}/{usuario}/{nuevo}', [SignController::class,'signup']);
+    //definicion de ruta con parametros 
+    Route::get('/signin/{iniciar?}/{sesion?}/{de?}/{usuario?}', [SignController::class,'signin']);
+    Route::get('/signup/{creacion?}/{usuario?}/{nuevo?}', [SignController::class,'signup']);
+    //definicion de ruta sin parametros
+    Route::get('/signup', [SignController::class,'signup']);
+    Route::get('/signin', [SignController::class,'signin']);
 });

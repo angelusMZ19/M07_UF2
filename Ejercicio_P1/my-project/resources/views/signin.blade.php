@@ -6,8 +6,9 @@
     <title>signin</title>
 </head>
 <body>
-    <h1>{{$titulo}}</h1>
-    <form method="POST" action="../session/authentication.php">
+    <h1>{{$titulo}}</h1><!--variable que recibe del controlador -->
+    <!-- formulario de login -->
+    <form method="POST" action="">
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
             <input type="text" class="form-control" name="email" >
@@ -23,7 +24,7 @@
           <input type="submit" class="btn btn-primary" name="submit"></imput>
           <br>
           <br>
-          <a href="./index.html">You don't have an account</a>
+          <a href="{{ url('veronica/signup') }}">You don't have an account</a><!-- redireccionamiento -->
     </form>
 </body>
 </html>
