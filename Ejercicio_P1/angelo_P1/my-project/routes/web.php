@@ -19,7 +19,9 @@ use App\Http\Controllers\SignController;
 Route::prefix('angelo')->group(function () {//es el prefigo con el que se identifica la ruta (localhost:8000/angelo/resto de parametros
     //ruta on la cantidad de paarametros que seben de pasar cuando se quiera ir al signin
     Route::get('/signin/{dato1}/{dato2}/{dato3}/{dato4}', [SignController::class, 'signin']);
+    Route::get('/signin', [SignController::class, 'signin']);//agregado para poder mostrar el formulario sin modificaciones en la ruta
     //ruta on la cantidad de paarametros que seben de pasar cuando se quiera ir al signup
     Route::get('/signup/{dato1}/{dato2}/{dato3}', [SignController::class, 'signup']);
+    Route::get('/signup', [SignController::class, 'signup']);//agregado para poder mostrar el formulario sin modificaciones en la ruta
 });
 //se debe tener en cuanta que la ruta completa en ambos casos se debe utilizar el prefijo que seria localhost:8000/angelo/signin o signup segun corresponda/resto de parametros

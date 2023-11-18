@@ -2,7 +2,7 @@
 
 
 <!-- Contenido de la vista signup 
-tener en cuenta que si pongo <h3>{{!! $dato !!}} al ejecutar me saltra el texto con las llaves y las !! son para que no se salte las etiquetas de html y me realice los saltos de pagina</h3> -->
+tener en cuenta que si pongo dobles signos de exclamacion al ejecutar me saltra el texto con las llaves y las !! son para que no se salte las etiquetas de html y me realice los saltos de pagina</h3> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +14,7 @@ tener en cuenta que si pongo <h3>{{!! $dato !!}} al ejecutar me saltra el texto 
 <body>
     <h1>{{ $dato }}</h1><!-- por auqie se pasaran los datos obtenidos de las ruta referente a signup -->
 
-    <form method="POST" action="./signin.php">
+    <form method="POST" action="">
         <div>
             <label>Id</label><br>
             <input type="text" name="id">
@@ -58,7 +58,7 @@ tener en cuenta que si pongo <h3>{{!! $dato !!}} al ejecutar me saltra el texto 
         
     </form>
     <br>
-    <a href="{{ url('/signin') }}">Ir a Signin</a><!-- redireccionamiento al signup pero no van porque al redireccionar no cumplen con la ruta especificada -->
+    <a href="{{ url('angelo/signin') }}">Ir a Signin</a><!-- redireccionamiento al signup funcio cunado no se le pasan parametros -->
       
 </body>
 </html>
