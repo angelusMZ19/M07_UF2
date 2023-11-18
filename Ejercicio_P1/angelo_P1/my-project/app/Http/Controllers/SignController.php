@@ -3,19 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-//use App\Http\Controllers\SignController;
+
+
 class SignController extends Controller
 {
-    //
-    public function usuari1($dato1=''){//aqui se le pasan los parametro que se obtiene de la ruta
-        $textFinal= 'usuari1: Angelo';
-        $textFinal=($dato1=='')?'Sense cognom':$dato1;//esto es lo que muestra en la pagina 
-        return view ('viewUsuaris')->with('nomUsuari',$textFinal);
+    //se crea funcion con el nombre sigin y se pasan los valores que toman los parametro por medio de las rutas especificadas en el web.php
+    public function signin($dato1, $dato2, $dato3, $dato4)
+    {
+        $parametro =' ';
+        $parametro .= " ".$dato1." ". $dato2. " ".$dato3." ". $dato4;
+        return view('signin')->with('dato', ($parametro));
+        
     }
-
-    public function usuari2($dato1, $dato2, $dato3){//aqui se le pasan los parametro que se obtiene de la ruta
-        $textFinal= 'usuari2: Fernanda';
-        $textFinal= $dato1."". $dato2."te ".$dato3;//esto es lo que muestra en la pagina 
-        return view ('viewUsuaris')->with('nomUsuari',$textFinal);
+    //se crea funcion con el nombre sigup y se pasan los valores que toman los parametro por medio de las rutas especificadas en el web.php
+    public function signup($dato1, $dato2, $dato3)
+    {
+        $parametro = ' ';
+        $parametro .= " ".$dato1." ". $dato2. " ".$dato3;
+        return view('signup')->with('dato',  ($parametro));
     }
 }
+//Este método with se utiliza para pasar datos a la vista. En este caso, le estás pasando un dato llamado dato con el valor de la variable parametro, estos se obtiene de la views correspondiente a la funcio signin(signin.blade.php), signup(signup.balde.php)
+ 
