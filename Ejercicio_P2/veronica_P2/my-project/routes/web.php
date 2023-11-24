@@ -23,7 +23,4 @@ Route::prefix('/veronica') ->group(function(){
     Route::get('/signin', [SignController::class,'signin'])->name('signin');
 });
 
-Route::prefix('/metodopost') ->group(function(){
-    Route::post('/products', [SignController::class,'products'])->name('products');
-});
 
