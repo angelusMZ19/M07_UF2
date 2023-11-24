@@ -8,7 +8,8 @@
 <body>
     <h1>{{$titulo}}</h1><!--variable que recibe del controlador -->
     <!-- formulario de login -->
-    <form method="POST" action="">
+    <form method="POST" action="{{route('admin_view')}}">
+      @csrf
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
             <input type="text" class="form-control" name="email" >
@@ -24,7 +25,7 @@
           <input type="submit" class="btn btn-primary" name="submit"></imput>
           <br>
           <br>
-          <a href="{{ url('veronica/signup') }}">You don't have an account</a><!-- redireccionamiento -->
+          <a href="{{ route('signup') }}">You don't have an account</a><!-- redireccionamiento -->
     </form>
 </body>
 </html>

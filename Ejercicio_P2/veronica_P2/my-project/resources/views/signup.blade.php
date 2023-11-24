@@ -41,7 +41,7 @@
       </div>
       <input type="submit" class="btn btn-primary" name="submit">
       <br>
-      <a href="{{ url('veronica/signin') }}">You already have an account</a> <!-- redireccionamiento -->
+      <a href="{{ route('signin') }}">You already have an account</a> <!-- redireccionamiento -->
     </form>
 </body>
 </html>

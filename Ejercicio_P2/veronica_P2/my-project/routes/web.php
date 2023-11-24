@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers\SingController;
 use App\Http\Controllers\SignController;
 
 /*
@@ -20,6 +19,11 @@ Route::prefix('/veronica') ->group(function(){
     Route::get('/signin/{iniciar?}/{sesion?}/{de?}/{usuario?}', [SignController::class,'signin']);
     Route::get('/signup/{creacion?}/{usuario?}/{nuevo?}', [SignController::class,'signup']);
     //definicion de ruta sin parametros
-    Route::get('/signup', [SignController::class,'signup']);
-    Route::get('/signin', [SignController::class,'signin']);
+    Route::get('/signup', [SignController::class,'signup'])->name('signup');
+    Route::get('/signin', [SignController::class,'signin'])->name('signin');
 });
+
+Route::prefix('/metodopost') ->group(function(){
+    Route::post('/products', [SignController::class,'products'])->name('products');
+});
+
