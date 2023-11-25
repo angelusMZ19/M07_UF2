@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 
-class SignController extends Controller
-{
+class SignController extends Controller{
     //se crea funcion con el nombre sigin y se pasan los valores que toman los parametro por medio de las rutas especificadas en el web.php
     public function signin($dato1='Iniciar', $dato2='session ', $dato3='de ', $dato4='Usuario'){//se declararon valores por defecto por que de lo contrario no funciona
         $parametro =' ';
@@ -21,7 +20,10 @@ class SignController extends Controller
         return view('signup')->with('dato',  ($parametro));
     }
 
-   
+    // public function product(Request $request){
+    //     $text = $request=['product']    ;
+    //     return view('products')->with(['result'=>$text]);
+    // }
 }
 //Este método with se utiliza para pasar datos a la vista. En este caso, le estás pasando un dato llamado dato con el valor de la variable parametro, estos se obtiene de la views correspondiente a la funcio signin(signin.blade.php), signup(signup.balde.php)
  
