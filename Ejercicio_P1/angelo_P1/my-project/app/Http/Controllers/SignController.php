@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class SignController extends Controller
 {
     //se crea funcion con el nombre sigin y se pasan los valores que toman los parametro por medio de las rutas especificadas en el web.php
-    public function signin($dato1, $dato2, $dato3, $dato4)
+    public function signin($dato1='Iniciar', $dato2='session ', $dato3='de ', $dato4='Usuario')//se declararon valores por defecto por que de lo contrario no funciona
     {
         $parametro =' ';
         $parametro .= " ".$dato1." ". $dato2. " ".$dato3." ". $dato4;
@@ -16,7 +16,7 @@ class SignController extends Controller
         
     }
     //se crea funcion con el nombre sigup y se pasan los valores que toman los parametro por medio de las rutas especificadas en el web.php
-    public function signup($dato1, $dato2, $dato3)
+    public function signup($dato1='Creacion', $dato2=' nuevo ', $dato3=' Ususario ')
     {
         $parametro = ' ';
         $parametro .= " ".$dato1." ". $dato2. " ".$dato3;

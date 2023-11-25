@@ -8,7 +8,7 @@
     <title>Formulari de inicio de sesion</title>
 </head>
 <body>
-    <h1>{{ $dato }}</h1><!-- por auqie se pasaran los datos obtenidos de las ruta referente a signin -->
+    <h1>{{$dato}}</h1><!-- por auqie se pasaran los datos obtenidos de las ruta referente a signin -->
     <form method="POST" action="">
         
         <div>
@@ -26,6 +26,6 @@
         
      </form> 
      <br>   
-     <a href="{{ url('/signup') }}">Ir a Signup</a> <!--redireccionamiento al signup -->
+     <a href="{{ url('angelo/signup') }}">Ir a Signup</a> <!--redireccionamiento al signup funcio cunado no se le pasan parametros -->
 </body>
 </html>
