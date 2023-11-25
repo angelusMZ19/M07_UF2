@@ -8,7 +8,7 @@
     <title>signup</title>
 </head>
 <body>
-<h1 >{{$titulo}}</h1><!-- variable que recibe del controlador -->
+<h1 >Register</h1><!-- variable que recibe del controlador -->
     <form method="POST"  class="mx-auto mt-1" style="max-width: 350px;" action="">
       <div class="mb-3">
         <label for="inputName" class="form-label">Id</label>

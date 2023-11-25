@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signin</title>
 </head>
+<!--estilos de la vista-->
 <style>
   .text-danger{
     color: red;
   }
+  a{
+        color:blue;
+    }
+  a:hover{
+      color:red;
+  }
 </style>
 <body>
-    <h1>Login</h1><!--variable que recibe del controlador -->
+    <h1>Login</h1>
     <!-- formulario de login -->
     <form method="POST" action="{{route('admin_view')}}">
-      @csrf
+      @csrf <!--token de CSRF -->
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
             <input type="text" class="form-control" name="email" >
-              @error('email')
+              @error('email') <!--variable que recibe del controlador del array de errores -->
                     <span class="text-danger">{{ $message }}</span>
               @enderror
           </div>

@@ -14,7 +14,22 @@ use App\Http\Controllers\Admin\AdminController;
 |
 */
 
+// Utiliza un middleware llamado 'admin_db' para aplicar ciertas reglas o lógica antes de que se maneje la solicitud
 Route::middleware(['admin_db'])->group(function(){
-    Route::get('centres',[AdminController::class,'centres'])->name('centres');
-    Route::post('admin_view',[AdminController::class,'usuaris'])->name('admin_view');;
+
+    // Ruta para la vista 'admin_view' que maneja solicitudes POST
+    Route::post('admin_view', [AdminController::class, 'usuaris'])->name('admin_view');
+
+    // Ruta para la vista 'centres' que maneja solicitudes GET
+    Route::get('centres', [AdminController::class, 'centres'])->name('centres');
+
+    // Ruta para la vista 'professorat' que maneja solicitudes GET
+    Route::get('professorat', [AdminController::class, 'professorat'])->name('professorat');
+
+    // Ruta para la vista 'alumnat' que maneja solicitudes GET
+    Route::get('alumnat', [AdminController::class, 'alumnat'])->name('alumnat');
+
+    // Ruta para la vista 'admin' que maneja solicitudes GET
+    Route::get('admin', [AdminController::class, 'vistaAdmin'])->name('admin');
+
 });
