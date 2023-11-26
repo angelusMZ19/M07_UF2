@@ -12,9 +12,8 @@ tener en cuenta que si pongo dobles signos de exclamacion al ejecutar me saltra 
 
 </head>
 <body>
-    <h1>{{ $dato }}</h1><!-- por auqie se pasaran los datos obtenidos de las ruta referente a signup -->
-    <!-- el action seria tipo {{route('usuario')}}que redireque al que se llama  ->name('usuari') -->
-    <form method="POST" action="{{ route('admin.usuario') }}">
+    <h1>Sign up</h1>
+    <form method="POST" action="{{ route('users') }}">
     @csrf
         <div>
             <label>Id</label><br>
