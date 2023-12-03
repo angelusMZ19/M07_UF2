@@ -16,12 +16,13 @@ class AlumnosFactory extends Factory
      */
     public function definition(): array
     {
+        // Define los atributos y valores predeterminados para la creación de instancias de Alumnos.
         return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => static::$password ??= Hash::make('password'),
-            'remember_token' => Str::random(10),
+            'name' => fake()->text(25),
+            'surname' => fake()->text(25),
+            'email' => fake()->text(15),
+            'password' => fake()->numberBetween(1,100),
+            'active' => fake()->randomElement([true, false])
         ];
     }
 }

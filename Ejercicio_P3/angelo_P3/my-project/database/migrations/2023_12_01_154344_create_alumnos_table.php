@@ -6,28 +6,25 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
+        //se crea tabla con el nomrbe de alumnos
         Schema::create('alumnos', function (Blueprint $table) {
-            $table->increment('id');
+            //se establecen los valores y los tipso de datos para cada uno 
+            $table->increments('id');
             $table->timestamps();
-            $table->string('name');
+            $table->string('name',50);
             $table->string('surname');
-            $table->int('password');
+            $table->integer('password');
             $table->boolean('active');
             $table->string('email');
             
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
+        //borra si la tabla existe y actualiza con datos creandola de nuevo 
         Schema::dropIfExists('alumnos');
     }
 };

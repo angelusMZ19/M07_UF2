@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class alumnos extends Model
+class Profesores extends Model
 {
-    use HasFactory;  
-    //nombre de la tabla   
-    protected $table='alumnos';
+    use HasFactory;
+    //nombre de la tabla 
+    protected $table='profesores';
     // Especifica los campos que se pueden llenar mediante asignación masiva.
     protected $fillable=[
         'name',
